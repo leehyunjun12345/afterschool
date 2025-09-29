@@ -1,0 +1,175 @@
+.asd2-container {
+  display: flex;
+  height: 100vh;
+  font-family: "Pretendard", sans-serif;
+  background-color: #0b1424; /* 메인 배경 */
+  color: white;
+}
+
+/* 사이드바 */
+.sidebar {
+  width: 220px;
+  background-color: #0b1424;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar-top {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-title {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 20px;
+}
+
+.divider {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin: 6px 0;
+}
+
+.menu {
+  margin-top: 5px;
+}
+
+.menu-item {
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.menu-item:hover {
+  background-color: #223355;
+  color: white;
+}
+
+.menu-item.active {
+  color: white;
+}
+
+/* 사이드바 하단 */
+.sidebar-footer {
+  padding: 20px;
+  border-top: 1px solid #223355;
+  text-align: center;
+  
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  background-color: #666;
+  border-radius: 50%;
+}
+
+.logout {
+  background: none;
+  border: 1px solid red;
+  padding: 4px 10px;
+  color: red;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 6px;
+}
+
+/* 메인 */
+.main-content {
+  flex: 1;
+  padding: 30px 40px;
+  background-color: #101828; /* 페이지 배경 */
+  overflow-y: auto;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-sub,
+.btn-main {
+  background: none;
+  border: 1px solid #223355;
+  padding: 6px 14px;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-main.active {
+  background-color: #223355;
+  font-weight: bold;
+}
+
+/* 테이블 */
+.table-wrapper {
+  background-color: #0f1e36;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.custom-table thead {
+  background-color: #223355;
+  font-weight: bold;
+}
+
+.custom-table th,
+.custom-table td {
+  padding: 16px;
+  text-align: center;
+  border-bottom: 1px solid #223355;
+}
+
+/* 상태 */
+.status.blue {
+  background-color: #1e3a8a;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.status.red-dot {
+  width: 8px;
+  height: 8px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+/* 신청취소 버튼 */
+.cancel-btn {
+  background-color: #ef4444;
+  border: none;
+  padding: 8px 14px;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.cancel-btn:hover {
+  background-color: #b91c1c;
+}
