@@ -1,37 +1,40 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
-import "./App.css";
-import AfterschoolDetail from "./pages/AfterschoolDetail";
-import AsD2 from "./pages/AsD2";
+import "./ads1.css";
 
+function AttendanceStats() {
+  const navigate = useNavigate();
 
-// 방과후 리스트 컴포넌트
-function AfterschoolList() {
   return (
     <div className="app-container">
+      {/* 사이드바 */}
       <aside className="sidebar">
         <div className="sidebar-top">
           <div className="sidebar-title">방과후 관리</div>
           <div className="divider"></div>
           <nav className="menu">
-            {/* 클릭 시 / 로 이동 */}
             <div
-              className="menu-item active"
+              className="menu-item"
               onClick={() => navigate("/")}
               style={{ cursor: "pointer" }}
             >
-              방과후 신청
+              방과후 등록
             </div>
             <div className="divider"></div>
-
-            {/* 클릭 시 /apply-list 로 이동 */}
             <div
               className="menu-item"
               onClick={() => navigate("/apply-list")}
               style={{ cursor: "pointer" }}
-              
             >
               신청내역
+            </div>
+            <div className="divider"></div>
+            <div
+              className="menu-item active"
+              onClick={() => navigate("/attendance")}
+              style={{ cursor: "pointer" }}
+            >
+              출석하기
             </div>
             <div className="divider"></div>
           </nav>
@@ -46,12 +49,23 @@ function AfterschoolList() {
         </div>
       </aside>
 
+      {/* 메인 영역 */}
       <main className="main">
-        <h2 className="main-title">방과후 신청</h2>
+        <div className="main-header">
+          <h2 className="main-title">출석통계</h2>
+          <div className="header-buttons">
+            <button className="btn-check">출석체크</button>
+            <button className="btn-stats">출석통계</button>
+          </div>
+        </div>
+
+        {/* 검색 박스 */}
         <div className="search-box">
+          <label className="search-label">방과후 검색</label>
           <input type="text" placeholder="방과후를 선택하세요" />
         </div>
 
+        {/* 테이블 */}
         <div className="table">
           <div className="table-header">
             <span>프로그램</span>
@@ -60,15 +74,14 @@ function AfterschoolList() {
             <span>신청인원</span>
             <span>관리</span>
           </div>
+
           <div className="table-row">
             <span>롤파크 여행</span>
             <span>박철수</span>
             <span>화,목 15:30 ~ 20:00</span>
             <span>5/10명</span>
-            {/* 버튼 클릭 시 상세페이지로 이동 */}
-            <button className="apply-btn" onClick={() => navigate("/detail")}>
-              신청하기
-            </button>
+            <button className="apply-btn">인원보기</button>
+            <span className="dot"></span>
           </div>
         </div>
       </main>
@@ -76,14 +89,12 @@ function AfterschoolList() {
   );
 }
 
-// 전체 라우터 구조
+// 라우터 설정
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<AfterschoolList />} />
-        <Route path="/detail" element={<AfterschoolDetail />} />
-        <Route path="/apply-list" element={<AsD2 />} />
+        <Route path="/attendance" element={<AttendanceStats />} />
       </Routes>
     </Router>
   );

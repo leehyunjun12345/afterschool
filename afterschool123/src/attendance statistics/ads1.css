@@ -1,0 +1,191 @@
+/* 전체 초기화 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  font-family: "Pretendard", sans-serif;
+  background-color: #0f172a; /* 전체 배경 */
+  color: white;
+  overflow: hidden;
+}
+
+/* ---------------- 사이드바 ---------------- */
+.sidebar {
+  width: 220px;
+  background-color: #0d1422;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar-title {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 16px;
+  color: white;
+}
+
+.divider {
+  height: 1px;
+  background-color: #1e293b;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-item {
+  padding: 14px 16px;
+  font-size: 15px;
+  color: #cbd5e1;
+}
+
+.menu-item.active {
+  background-color: #1e293b;
+  color: white;
+}
+
+.sidebar-footer {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.circle {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #3b82f6;
+}
+
+.logout {
+  border: none;
+  background: none;
+  color: red;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* ---------------- 메인 ---------------- */
+.main {
+  flex: 1;
+  background-color: #0f172a;
+  padding: 24px;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-check {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-stats {
+  background-color: #475569;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* ---------------- 검색 박스 ---------------- */
+.search-box {
+  background-color: #1e293b;
+  border-radius: 12px;
+  padding: 16px;
+  margin: 20px 0;
+}
+
+.search-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+
+/* ---------------- 테이블 ---------------- */
+.table {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.table-header,
+.table-row {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1.5fr 1fr 0.8fr 0.2fr;
+  align-items: center;
+  padding: 14px 16px;
+  font-size: 14px;
+}
+
+.table-header {
+  background-color: #1e293b;
+  font-weight: bold;
+  color: #d1d5db;
+}
+
+.table-row {
+  background-color: #111827;
+  border-top: 1px solid #1e293b;
+}
+
+.apply-btn {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: red;
+  justify-self: center;
+}

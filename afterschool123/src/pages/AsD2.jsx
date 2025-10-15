@@ -20,7 +20,7 @@ function AsD2() {
               onClick={() => navigate("/")}
               style={{ cursor: "pointer" }}
             >
-              방과후 등록
+              방과후 신청
             </div>
             <div className="divider"></div>
 

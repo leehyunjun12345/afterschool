@@ -1,0 +1,191 @@
+.student-container {
+  display: flex;
+  height: 100vh;
+  font-family: "Pretendard", sans-serif;
+  background-color: #0b1424;
+  color: white;
+}
+
+/* 사이드바 */
+.sidebar {
+  width: 220px;
+  background-color: #0b1424;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar-top {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-title {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 20px;
+}
+
+.divider {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 6px 0;
+}
+
+.menu-item {
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.menu-item:hover {
+  background-color: #223355;
+}
+
+
+/* 사이드바 하단 */
+.sidebar-footer {
+  padding: 20px;
+  border-top: 1px solid #223355;
+  text-align: left;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  background-color: #666;
+  border-radius: 50%;
+}
+
+.profile-info {
+  font-size: 13px;
+  line-height: 1.2;
+}
+
+.email {
+  color: #9ca3af;
+}
+
+.logout {
+  background: none;
+  border: none;
+  color: red;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* 메인 컨텐츠 */
+.main-content {
+  flex: 1;
+  padding: 30px 40px;
+  background-color: #101828;
+  overflow-y: auto;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-sub,
+.btn-main {
+  background: none;
+  border: 1px solid #223355;
+  padding: 6px 14px;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-main.active {
+  background-color: #223355;
+}
+
+/* 검색창 */
+.search-box {
+  background-color: #0f1e36;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.search-box label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #cbd5e1;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 10px;
+  background-color: #101828;
+  border: 1px solid #223355;
+  color: white;
+  border-radius: 6px;
+}
+
+/* 테이블 */
+.table-wrapper {
+  background-color: #0f1e36;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.custom-table thead {
+  background-color: #223355;
+  font-weight: bold;
+}
+
+.custom-table th,
+.custom-table td {
+  padding: 14px;
+  text-align: center;
+  border-bottom: 1px solid #223355;
+}
+
+.btn-approve {
+  background-color: #3b82f6;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  margin-right: 6px;
+}
+
+.btn-approve:hover {
+  background-color: #2563eb;
+}
+
+.btn-reject {
+  background-color: #ef4444;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-reject:hover {
+  background-color: #b91c1c;
+}
